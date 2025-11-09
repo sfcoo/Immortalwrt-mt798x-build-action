@@ -124,7 +124,7 @@ jobs:
         name: ${{ env.FILE_DATE }}-${{ env.OPENWRT_NAME }}-${{ env.DEVICE_NAME }}
         path: ${{ env.FIRMWARE }}
 
-    - name: 生成release标签
+    - name: Tag the repository
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
